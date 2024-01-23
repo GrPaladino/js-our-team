@@ -38,19 +38,17 @@ const team = [
 // # CICLO PER ESTRARRE INFO DA ARRAY
 let member = "";
 
-for (const arrayItem in team) {
-  for (let arrayItem of team) {
-    const name = arrayItem.name;
-    const role = arrayItem.role;
-    const image = arrayItem.image;
+for (let arrayItem of team) {
+  const name = arrayItem.name;
+  const role = arrayItem.role;
+  const image = arrayItem.image;
 
-    member = `<li class="col-4">
+  member = `<li class="col-4">
     <div class="card">
     <img src="./img/${image}" alt='${name}' />
     <h6>${name}</h6>
     <p>${role}</p>
     </div>
     </li>`;
-    teamContainer.innerHTML += member;
-  }
+  teamContainer.innerHTML += member;
 }
