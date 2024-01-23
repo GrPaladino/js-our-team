@@ -43,8 +43,14 @@ for (let member of team) {
   const image = member.image;
   console.log("Nome: " + name, "Ruolo: " + role, "Immagine: " + image);
 
-  member = `<div class="card">${name}  ${role}  ${image}</div>`;
+  member = `<li class="col-4">
+  <div class="card">
+    <img src="./img/${image}" alt='${name}' />
+    <p>${name}</p>
+    <p>${role}</p>
+    </div>
+  </li>`;
   teamContainer.innerHTML += member;
-}
 
-console.log(teamContainer);
+  console.log(member);
+}
