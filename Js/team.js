@@ -46,7 +46,7 @@ for (let member of team) {
   member = `<li class="col-4">
   <div class="card">
     <img src="./img/${image}" alt='${name}' />
-    <p>${name}</p>
+    <h6>${name}</h6>
     <p>${role}</p>
     </div>
   </li>`;
