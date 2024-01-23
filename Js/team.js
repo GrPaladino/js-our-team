@@ -1,3 +1,7 @@
+// # DOM ELEMENTS
+const teamContainer = document.getElementById("team");
+
+// # ARRAY
 const team = [
   {
     name: "Wayne Barnett",
@@ -31,9 +35,16 @@ const team = [
   },
 ];
 
-for (const member of team) {
+// # CICLO PER ESTRARRE INFO DA ARRAY
+let member = "";
+for (let member of team) {
   const name = member.name;
   const role = member.role;
   const image = member.image;
-  console.log(name, role, image);
+  console.log("Nome: " + name, "Ruolo: " + role, "Immagine: " + image);
+
+  member = `<div class="card">${name}  ${role}  ${image}</div>`;
+  teamContainer.innerHTML += member;
 }
+
+console.log(teamContainer);
